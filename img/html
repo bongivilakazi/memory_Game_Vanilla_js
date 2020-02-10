@@ -1,0 +1,138 @@
+What is HTML?
+
+HTML is the standard markup language for creating Web pages.
+
+    HTML stands for Hyper Text Markup Language
+    HTML describes the structure of a Web page
+    HTML consists of a series of elements
+    HTML elements tell the browser how to display the content
+    HTML elements are represented by tags
+    HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
+    Browsers do not display the HTML tags, but use them to render the content of the page
+
+    The <!DOCTYPE html> declaration defines this document to be HTML5
+    The <html> element is the root element of an HTML page
+    The <head> element contains meta information about the document
+    The <title> element specifies a title for the document
+    The <body> element contains the visible page content
+    The <h1> element defines a large heading
+    The <p> element defines a paragraph
+HTML Documents
+
+All HTML documents must start with a document type declaration: <!DOCTYPE html>.
+
+The HTML document itself begins with <html> and ends with </html>.
+
+The visible part of the HTML document is between <body> and </body>. 
+HTML Headings
+
+HTML headings are defined with the <h1> to <h6> tags.
+
+<h1> defines the most important heading. <h6> defines the least important heading:
+HTML Elements
+
+An HTML element usually consists of a start tag and an end tag, with the content inserted in between:
+<tagname>Content goes here...</tagname>
+
+The HTML element is everything from the start tag to the end tag:
+<p>My first paragraph.</p>
+Start tag 	Element content 	End tag
+<h1> 	My First Heading 	</h1>
+<p> 	My first paragraph. 	</p>
+<br> 	  	 
+
+HTML elements with no content are called empty elements. Empty elements do not have an end tag, such as the <br> element (which indicates a line break).
+Nested HTML Elements
+
+HTML elements can be nested (elements can contain elements).
+
+All HTML documents consist of nested HTML elements.
+
+This example contains four HTML elements:
+Example
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
+Example Explained
+
+The <html> element defines the whole document.
+
+It has a start tag <html> and an end tag </html>.
+
+Inside the <html> element is the <body> element.
+<html>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
+
+The <body> element defines the document body.
+
+It has a start tag <body> and an end tag </body>.
+
+Inside the <body> element is two other HTML elements: <h1> and <p>.
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+
+The <h1> element defines a heading.
+
+It has a start tag <h1> and an end tag </h1>.
+
+The element content is: My First Heading.
+<h1>My First Heading</h1>
+
+The <p> element defines a paragraph.
+
+It has a start tag <p> and an end tag </p>.
+
+The element content is: My first paragraph.
+<p>My first paragraph.</p>
+Do Not Forget the End Tag
+
+Some HTML elements will display correctly, even if you forget the end tag:
+Example
+<html>
+<body>
+
+<p>This is a paragraph
+<p>This is a paragraph
+
+</body>
+</html>
+
+The example above works in all browsers, because the closing tag is considered optional.
+
+Never rely on this. It might produce unexpected results and/or errors if you forget the end tag.
+Empty HTML Elements
+
+HTML elements with no content are called empty elements.
+
+<br> is an empty element without a closing tag (the <br> tag defines a line break):
+Example
+<p>This is a <br> paragraph with a line break.</p>
+
+Empty elements can be "closed" in the opening tag like this: <br />.
+
+HTML5 does not require empty elements to be closed. But if you want stricter validation, or if you need to make your document readable by XML parsers, you must close all HTML elements properly.
+HTML Is Not Case Sensitive
+
+HTML tags are not case sensitive: <P> means the same as <p>.
+
+The HTML5 standard does not require lowercase tags, but W3C recommends lowercase in HTML, and demands lowercase for stricter document types like XHTML.
+
+At W3Schools we always use lowercase tags.
+
+

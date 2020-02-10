@@ -1,12 +1,12 @@
 const cards = document.querySelectorAll('.memory-card');
-let deckLocker = false;
+let lockTiles = false;
 let initialCard;
 let nextCard;
-let revealedCard = false;
+let invertCard = false;
 
-function revealCard() {
+function invertCard() {
 
-    if (deckLocker) return;
+    if (lockTiles) return;
     if (this == initialCard)
         return;
     this.classList.add('flip');
@@ -15,7 +15,7 @@ function revealCard() {
         initialCard = this;
         return;
     }
-    revealedCard = false;
+    invertCard = false;
     nextCard = this;
     checkForMatch();
 }
@@ -25,13 +25,13 @@ function checkForMatch() {
     isMatch ? disableCards() : unflipCards();
 }
 
-function disableCards() {
+function immobilizeCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     resetBoard();
 }
 
-function unflipCards() {
+function unflipCards(){
     lockBoard = true;
 
     setTimeout(() => {
@@ -65,4 +65,7 @@ var timer = setInterval(function(){
 function clearTimer(){
     clearInterval(timer);
 }
+resetbtn.addEventListener('click',function(){
+    
+})
 cards.forEach(card => card.addEventListener('click', flipCard));
